@@ -1,5 +1,5 @@
 %define realname   BDB
-%define version    1.71
+%define version    1.81
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
@@ -8,11 +8,11 @@ Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Asynchronous Berkeley DB access
-Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
+Source:     http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/BDB
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
-BuildRequires: db4.6-devel
+BuildRequires: db4.7-devel
 
 
 %description
