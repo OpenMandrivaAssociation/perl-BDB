@@ -1,5 +1,5 @@
 %define realname   BDB
-%define version    1.82
+%define version    1.83
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
