@@ -12,6 +12,7 @@ Url:        http://search.cpan.org/dist/BDB
 Source0:    http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: db4.7-devel
+BuildRequires: perl(common::sense)
 BuildRequires: perl-devel
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
