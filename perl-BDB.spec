@@ -1,26 +1,25 @@
-%define realname   BDB
-%define version    1.83
-%define release    %mkrel 1
+%define upstream_name    BDB
+%define upstream_version 1.84
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Asynchronous Berkeley DB access
-Source:     http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{realname}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
 Url:        http://search.cpan.org/dist/BDB
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
-BuildRequires: db4.7-devel
+Source0:    http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires: db4.7-devel
+BuildRequires: perl-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This is the Asynchronous Berkeley DB access API for Perl and DB 4.6.
 
-
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,4 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Changes META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
