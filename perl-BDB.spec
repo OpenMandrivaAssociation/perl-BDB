@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 4
 
 Summary:    Asynchronous Berkeley DB access
 License:    GPL+ or Artistic
@@ -14,7 +14,10 @@ Source0:    http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{upstream_name
 BuildRequires: db4-devel
 BuildRequires: perl(common::sense)
 BuildRequires: perl-devel
+
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+
+Requires: perl(common::sense)
 
 %description
 This is the Asynchronous Berkeley DB access API for Perl and DB 4.6.
@@ -27,7 +30,7 @@ This is the Asynchronous Berkeley DB access API for Perl and DB 4.6.
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
