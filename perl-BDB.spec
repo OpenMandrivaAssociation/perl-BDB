@@ -1,9 +1,9 @@
 %define upstream_name    BDB
-%define upstream_version 1.87
+%define upstream_version 1.88
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Release:    %mkrel 1
 
 Summary:    Asynchronous Berkeley DB access
 License:    GPL+ or Artistic
