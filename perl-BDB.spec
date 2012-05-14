@@ -1,9 +1,9 @@
 %define upstream_name    BDB
-%define upstream_version 1.88
+%define upstream_version 1.9
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 
 Summary:    Asynchronous Berkeley DB access
 License:    GPL+ or Artistic
@@ -11,7 +11,7 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/BDB
 Source0:    http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: db4-devel
+BuildRequires: db-devel
 BuildRequires: perl(common::sense)
 BuildRequires: perl-devel
 
