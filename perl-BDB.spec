@@ -9,7 +9,7 @@ Summary:    Asynchronous Berkeley DB access
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/BDB
+Url:        https://search.cpan.org/dist/BDB
 Source0:    http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: db-devel
